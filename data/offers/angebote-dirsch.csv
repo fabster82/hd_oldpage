@@ -1,0 +1,12 @@
+order;title;slug;category;nights;starting_price_text;image;booking_type;booking_form_slug;old_url
+1;Schnäppchentage;schnaeppchentage;wellness;;;/assets/img/dirsch/offers/01-schnaeppchentage.webp;direct_url;;https://hotel-dirsch.de/angebote/schnaeppchentage
+2;2 Tage nur für mich;2-tage-nur-fuer-mich;wellness;1;1 Nacht ab 186,00€ pro Person im Doppelzimmer;/assets/img/dirsch/offers/02-2-tage-nur-fuer-mich.webp;offer_form;2-tage-nur-fuer-mich;https://hotel-dirsch.de/angebote/2-tage-nur-fuer-mich
+3;Sunday Special;sunday-special;wellness;1;1 Nacht ab 166,00 € pro Person im Doppelzimmer;/assets/img/dirsch/offers/03-sunday-special.webp;offer_form;sunday-special;https://hotel-dirsch.de/angebote/sunday-special
+4;Genießertage;geniessertage;genuss-wellness;1-14;2 Nächte ab 246,00€ pro Person im Doppelzimmer;/assets/img/dirsch/offers/04-geniessertage.webp;offer_form;geniessertage;https://hotel-dirsch.de/angebote/geniessertage
+5;Zeit zu Zweit;zeit-zu-zweit;romantik;2-6;2 Nächte ab 302,00€ pro Person;/assets/img/dirsch/offers/05-zeit-zu-zweit.webp;offer_form;zeit-zu-zweit;https://hotel-dirsch.de/angebote/zeit-zu-zweit
+6;Best Friends;best-friends;freunde-wellness;2-4;2 Nächte ab 269,00€ pro Person im Doppelzimmer;/assets/img/dirsch/offers/06-best-friends.webp;offer_form;best-friends;https://hotel-dirsch.de/angebote/best-friends
+7;Wellnessauszeit;wellnessauszeit;wellness;3-7;;/assets/img/dirsch/offers/07-wellnessauszeit.webp;offer_form;wellnessauszeit;https://hotel-dirsch.de/angebote/wellness-auszeit
+8;Sparfuchswoche;sparfuchswoche;sparpreis-wellness;7-14;;/assets/img/dirsch/offers/08-sparfuchswoche.webp;offer_form;sparfuchswoche;https://hotel-dirsch.de/angebote/sparfuchswoche
+9;Wandertage im Altmühltal;wandertage-im-altmuehltal;aktiv;2-14;;/assets/img/dirsch/offers/09-wandertage-im-altmuehltal.webp;offer_form;wandertage;https://hotel-dirsch.de/angebote/wandertage-im-altmuehltal
+10;Radfahren im Altmühltal;radfahren-im-altmuehltal;aktiv;2-14;;/assets/img/dirsch/offers/10-radfahren-im-altmuehltal.webp;offer_form;radfahren;https://hotel-dirsch.de/angebote/radfahren-im-altmuehltal
+11;Golf und Wellness im Hotel Dirsch;golf-und-wellness-im-hotel-dirsch;golf-aktiv;7;;/assets/img/dirsch/offers/11-golf-und-wellness-im-hotel-dirsch.webp;offer_form;golfen;https://hotel-dirsch.de/angebote/golf-und-wellness-im-hotel-dirsch

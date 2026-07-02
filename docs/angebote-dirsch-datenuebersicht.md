@@ -1,0 +1,523 @@
+# Hotel Dirsch – Datenübersicht Angebote
+Dieses Paket ist eine saubere Arbeitsgrundlage für Magica/GitHub. Es enthält keine neue Gestaltung, sondern die extrahierten Angebotsdaten der alten Hotel-Dirsch-Angebotsübersicht inklusive Detail-Leistungen, Preistexten, Bildzuordnung und Buchungs-/Formular-Hinweisen.
+## Ziel für die Umsetzung
+- `/angebote` als Angebotsübersicht mit globalen FABSTERsite-Komponenten bauen.
+- `/angebote/{slug}` als Angebotsdetailseiten bauen.
+- Bilder aus `assets/img/dirsch/offers/` verwenden.
+- Buchungsbox auf den Detailseiten mit vorhandenem `OfferBookingRenderer` bzw. `/forms/offer?offer=...` einbinden.
+- Keine neuen CSS-Inseln bauen; Startseite bleibt Design-Master.
+## Übersicht: 11 Angebote
+| # | Angebot | Slug | Kategorie | Nächte | Preistext | Bild | Buchung |
+|---:|---|---|---|---|---|---|---|
+| 1 | Schnäppchentage | `schnaeppchentage` | wellness |  | — | `/assets/img/dirsch/offers/01-schnaeppchentage.webp` | `https://hotel-dirsch.de/buchen/hotel-dirsch/packages/56540?lang=de&adults=2` |
+| 2 | 2 Tage nur für mich | `2-tage-nur-fuer-mich` | wellness | 1 | 1 Nacht ab 186,00€ pro Person im Doppelzimmer | `/assets/img/dirsch/offers/02-2-tage-nur-fuer-mich.webp` | `/forms/offer?offer=2-tage-nur-fuer-mich` |
+| 3 | Sunday Special | `sunday-special` | wellness | 1 | 1 Nacht ab 166,00 € pro Person im Doppelzimmer | `/assets/img/dirsch/offers/03-sunday-special.webp` | `/forms/offer?offer=sunday-special` |
+| 4 | Genießertage | `geniessertage` | genuss-wellness | 1–14 | 2 Nächte ab 246,00€ pro Person im Doppelzimmer | `/assets/img/dirsch/offers/04-geniessertage.webp` | `/forms/offer?offer=geniessertage` |
+| 5 | Zeit zu Zweit | `zeit-zu-zweit` | romantik | 2–6 | 2 Nächte ab 302,00€ pro Person | `/assets/img/dirsch/offers/05-zeit-zu-zweit.webp` | `/forms/offer?offer=zeit-zu-zweit` |
+| 6 | Best Friends | `best-friends` | freunde-wellness | 2–4 | 2 Nächte ab 269,00€ pro Person im Doppelzimmer | `/assets/img/dirsch/offers/06-best-friends.webp` | `/forms/offer?offer=best-friends` |
+| 7 | Wellnessauszeit | `wellnessauszeit` | wellness | 3–7 | — | `/assets/img/dirsch/offers/07-wellnessauszeit.webp` | `/forms/offer?offer=wellnessauszeit` |
+| 8 | Sparfuchswoche | `sparfuchswoche` | sparpreis-wellness | 7–14 | — | `/assets/img/dirsch/offers/08-sparfuchswoche.webp` | `/forms/offer?offer=sparfuchswoche` |
+| 9 | Wandertage im Altmühltal | `wandertage-im-altmuehltal` | aktiv | 2–14 | — | `/assets/img/dirsch/offers/09-wandertage-im-altmuehltal.webp` | `/forms/offer?offer=wandertage` |
+| 10 | Radfahren im Altmühltal | `radfahren-im-altmuehltal` | aktiv | 2–14 | — | `/assets/img/dirsch/offers/10-radfahren-im-altmuehltal.webp` | `/forms/offer?offer=radfahren` |
+| 11 | Golf und Wellness im Hotel Dirsch | `golf-und-wellness-im-hotel-dirsch` | golf-aktiv | 7 | — | `/assets/img/dirsch/offers/11-golf-und-wellness-im-hotel-dirsch.webp` | `/forms/offer?offer=golfen` |
+
+## Details je Angebot
+
+### 01. Schnäppchentage
+- **Slug:** `schnaeppchentage`
+- **Kategorie:** `wellness`
+- **Teaser:** Kurzurlaub zum attraktiven Vorteilspreis mit Wellness, Halbpension und Genussmomenten.
+- **Alte URL:** https://hotel-dirsch.de/angebote/schnaeppchentage
+- **Detailquelle:** `ANGEBOTE-DETAILS/Schnäppchentage_ Wellness-Auszeit im Altmühltal _ Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/01-schnaeppchentage.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/f97488ec0544a98f88f3bc570c5b55b018fb7d16_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - Übernachtung
+  - Landfrühstücksbuffet
+  - Halbpension
+  - Schwimmbadlounge
+  - Kuchenauswahl, Snacks und Kaffee
+  - Nutzung des Wellnessbereiches
+- **Detail-Leistungen:**
+  - Übernachtung
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - Schwimmbadlounge mit Saft- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Mögliche Anreise-Termine:**
+  - Donnerstag, 15.01.2026
+  - Sonntag, 18.01.2026
+  - Montag, 19.01.2026
+  - Dienstag, 20.01.2026
+  - Mittwoch, 21.01.2026
+  - Donnerstag, 22.01.2026
+  - Sonntag, 25.01.2026
+  - Sonntag, 01.02.2026
+  - Donnerstag, 05.02.2026
+  - Sonntag, 08.02.2026
+  - Donnerstag, 12.02.2026
+  - Montag, 16.02.2026
+  - Dienstag, 17.02.2026
+  - Donnerstag, 19.02.2026
+  - Sonntag, 22.02.2026
+  - Sonntag, 01.03.2026
+  - Sonntag, 08.03.2026
+  - Montag, 09.03.2026
+  - Sonntag, 15.03.2026
+  - Sonntag, 29.03.2026
+  - Sonntag, 19.04.2026
+  - Montag, 20.04.2026
+  - Donnerstag, 23.04.2026
+  - Sonntag, 26.04.2026
+  - Montag, 27.04.2026
+  - Mittwoch, 13.05.2026
+  - Mittwoch, 03.06.2026
+  - Sonntag, 14.06.2026
+  - Donnerstag, 25.06.2026
+  - Sonntag, 28.06.2026
+- **Buchung / Verfügbarkeit:**
+  - Typ: `direct_url`
+  - Direkt-URL: `https://hotel-dirsch.de/buchen/hotel-dirsch/packages/56540?lang=de&adults=2`
+
+### 02. 2 Tage nur für mich
+- **Slug:** `2-tage-nur-fuer-mich`
+- **Kategorie:** `wellness`
+- **Teaser:** Eine kompakte Wellness-Auszeit mit Day Spa, Halbpension und Zeit zum Durchatmen.
+- **Alte URL:** https://hotel-dirsch.de/angebote/2-tage-nur-fuer-mich
+- **Detailquelle:** `ANGEBOTE-DETAILS/2 Tage für mich – Wellness-Auszeit im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/02-2-tage-nur-fuer-mich.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/a34093d11fa328a21fe29a275c88f5811c58c44f_di3Y.webp`
+- **Preistext:** 1 Nacht ab 186,00€ pro Person im Doppelzimmer
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - Frühstücksbuffet am Anreisetag
+  - 1 Übernachtung
+  - Landfrühstücksbuffet
+  - Halbpension
+  - Kuchenauswahl, Snacks und Kaffee
+  - Benutzung SPA-Bereich
+- **Detail-Leistungen:**
+  - 1 x Frühstücksbuffet am Anreisetag (07.00 – 10.30 Uhr)
+  - 1 x Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - 1 x Begrüßungsdrink
+  - 1 x Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Übernachtung
+  - 1 x reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Bademantel leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - "Day Spa" Benutzung von Schwimmbad, Sauna- und Dampfbäderlandschaft am Anreisetag ab 10:00 Uhr (vor Check-in) und am Abreisetag bis 15:00 Uhr (nach Check-out) (aktuelle Öffnungszeiten auf der Homepage)
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `2-tage-nur-fuer-mich`
+  - Formular-URL: `/forms/offer?offer=2-tage-nur-fuer-mich`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 1 Übernachtung → Package `48177` / Nächte `1`
+
+### 03. Sunday Special
+- **Slug:** `sunday-special`
+- **Kategorie:** `wellness`
+- **Teaser:** Sonntag anreisen, Montag erholt abreisen – mit Day Spa und Halbpension.
+- **Alte URL:** https://hotel-dirsch.de/angebote/sunday-special
+- **Detailquelle:** `ANGEBOTE-DETAILS/Sunday Special – Wellness-Sonntag im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/03-sunday-special.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/40cad9dee2e5d99265fb88a9187ec16b592041e1_di3Y.webp`
+- **Preistext:** 1 Nacht ab 166,00 € pro Person im Doppelzimmer
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 1 Übernachtung So - Mo
+  - Landfrühstücksbuffet
+  - 1 x Begrüßungsdrink
+  - Halbpension
+  - Kuchenauswahl, Snacks und Kaffee
+  - "Day Spa" Benutzung
+- **Detail-Leistungen:**
+  - 1 x Begrüßungsdrink
+  - 1 x Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - 1 x Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Übernachtung
+  - 1 x reichhaltiges Altmühltaler Landfrühstücksbuffet am Abreisetag
+  - Bademantel leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - "Day Spa" Benutzung von Schwimmbad, Sauna- und Dampfbäderlandschaft am Anreisetag ab 11:00 Uhr (vor Check-in) und am Abreisetag bis 15:00 Uhr (nach Check-out) (aktuelle Öffnungszeiten auf der Homepage)
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `sunday-special`
+  - Formular-URL: `/forms/offer?offer=sunday-special`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 1 Übernachtung → Package `48180` / Nächte `1`
+
+### 04. Genießertage
+- **Slug:** `geniessertage`
+- **Kategorie:** `genuss-wellness`
+- **Teaser:** Kulinarik, Wellness und flexible Aufenthaltsdauer für echte Erholungstage.
+- **Alte URL:** https://hotel-dirsch.de/angebote/geniessertage
+- **Detailquelle:** `ANGEBOTE-DETAILS/Genießertage im Hotel Dirsch – Erholung & Genuss pur.htm`
+- **Bild:** `/assets/img/dirsch/offers/04-geniessertage.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/fe2b496f7dab659dabae622c9922f13c1a65a999_di3Y.webp`
+- **Preistext:** 2 Nächte ab 246,00€ pro Person im Doppelzimmer
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 1–14 Übernachtungen
+  - Landfrühstücksbuffet
+  - 1 x Begrüßungsdrink
+  - Halbpension
+  - Kuchenauswahl, Snacks und Kaffee
+  - Benutzung SPA-Bereich
+- **Detail-Leistungen:**
+  - 1–14 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `geniessertage`
+  - Formular-URL: `/forms/offer?offer=geniessertage`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 1 Übernachtung → Package `61396` / Nächte `1`
+    - 2 Übernachtungen → Package `48185` / Nächte `2`
+    - 3 Übernachtungen → Package `48587` / Nächte `3`
+    - 4 Übernachtungen → Package `48636` / Nächte `4`
+    - 5 Übernachtungen → Package `48588` / Nächte `5`
+    - 6 Übernachtungen → Package `48637` / Nächte `6`
+    - 7 Übernachtungen → Package `61402` / Nächte `7`
+    - 8 Übernachtungen → Package `61403` / Nächte `8`
+    - 9 Übernachtungen → Package `61404` / Nächte `9`
+    - 10 Übernachtungen → Package `61405` / Nächte `10`
+    - 11 Übernachtungen → Package `61424` / Nächte `11`
+    - 12 Übernachtungen → Package `61425` / Nächte `12`
+    - 13 Übernachtungen → Package `61426` / Nächte `13`
+    - 14 Übernachtungen → Package `61427` / Nächte `14`
+
+### 05. Zeit zu Zweit
+- **Slug:** `zeit-zu-zweit`
+- **Kategorie:** `romantik`
+- **Teaser:** Romantische Auszeit mit Dinner, Wein und gemeinsamen Wellnessmomenten.
+- **Alte URL:** https://hotel-dirsch.de/angebote/zeit-zu-zweit
+- **Detailquelle:** `ANGEBOTE-DETAILS/Zeit zu Zweit – Romantische Auszeit im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/05-zeit-zu-zweit.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/87ea618bb8a6b488f69277999a4cea198313e92f_di3Y.webp`
+- **Preistext:** 2 Nächte ab 302,00€ pro Person
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 2–6 Übernachtungen
+  - Landfrühstücksbuffet
+  - 1 x Begrüßungsdrink
+  - Halbpension
+  - 1 x romantisches Dinner
+  - 1 x Flasche Wein im Zimmer
+- **Detail-Leistungen:**
+  - 2–6 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr), davon 1 x Halbpension bei Kerzenschein am 2. Abend
+  - 1 x Begrüßungsdrink
+  - 1 kleine Flasche Wein bei Anreise auf dem Zimmer
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - 1 x 20,- € Wellnessgutschein pro Erwachsener (Wellness- und Beautybehandlungen bitte frühzeitig buchen: 08423 9850242)
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `zeit-zu-zweit`
+  - Formular-URL: `/forms/offer?offer=zeit-zu-zweit`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 2 Übernachtungen → Package `48190` / Nächte `2`
+    - 3 Übernachtungen → Package `48611` / Nächte `3`
+    - 4 Übernachtungen → Package `48645` / Nächte `4`
+    - 5 Übernachtungen → Package `48612` / Nächte `5`
+    - 6 Übernachtungen → Package `48646` / Nächte `6`
+
+### 06. Best Friends
+- **Slug:** `best-friends`
+- **Kategorie:** `freunde-wellness`
+- **Teaser:** Gemeinsame Wellnesszeit mit Freundinnen oder Freunden, Genuss und Shopping-Vorteil.
+- **Alte URL:** https://hotel-dirsch.de/angebote/best-friends
+- **Detailquelle:** `ANGEBOTE-DETAILS/Best Friends – Freundinnen-Wellness im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/06-best-friends.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/5f41db52f275c6e1b9691a326e05e2d8ecac405e_di3Y.webp`
+- **Preistext:** 2 Nächte ab 269,00€ pro Person im Doppelzimmer
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 2–4 Übernachtungen
+  - Landfrühstücksbuffet
+  - Begrüßungsdrink
+  - Halbpension
+  - Kaffee und Kuchen
+  - VIP-Shoppingeinladung
+- **Detail-Leistungen:**
+  - 2–4 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - 1 x Hauscocktail an der Hotelbar mit Knabbersnacks
+  - VIP-Shoppingeinladung in das Ingolstadt Village
+  - Bademantel leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `best-friends`
+  - Formular-URL: `/forms/offer?offer=best-friends`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 2 Übernachtungen → Package `48164` / Nächte `2`
+    - 3 Übernachtungen → Package `48606` / Nächte `3`
+    - 4 Übernachtungen → Package `48642` / Nächte `4`
+
+### 07. Wellnessauszeit
+- **Slug:** `wellnessauszeit`
+- **Kategorie:** `wellness`
+- **Teaser:** Mehrere Tage Wellness, Halbpension und Wellnessgutschein für zusätzliche Anwendungen.
+- **Alte URL:** https://hotel-dirsch.de/angebote/wellness-auszeit
+- **Detailquelle:** `ANGEBOTE-DETAILS/Wellnessauszeit für mich – Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/07-wellnessauszeit.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/3b633af377b832887342b89725f0faa2466f3c72_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 3–7 Übernachtungen
+  - Landfrühstücksbuffet
+  - 1 x Begrüßungsdrink
+  - Halbpension
+  - Kuchenauswahl, Snacks und Kaffee
+  - Wellnessgutschein
+- **Detail-Leistungen:**
+  - 3–7 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - 1 kleine Flasche Wein bei Anreise auf dem Zimmer
+  - 1 x 100,- € Wellnessgutschein pro Erwachsener (Wellness- und Beautybehandlungen bitte frühzeitig buchen: 08423 9850242)
+  - Dienstag: 15% Nachlass auf alle Gesichtsbehandlungen
+  - Mittwoch: 15% Nachlass auf alle Wellnessanwendungen
+  - Donnerstag: 15% Nachlass auf alle Detoxanwendungen
+  - Wellness- und Beautybehandlungen bitte frühzeitig buchen: 08423 9850242
+  - Bademantel leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `wellnessauszeit`
+  - Formular-URL: `/forms/offer?offer=wellnessauszeit`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 3 Übernachtungen → Package `61505` / Nächte `2`
+    - 4 Übernachtungen → Package `61507` / Nächte `4`
+    - 5 Übernachtungen → Package `61508` / Nächte `5`
+    - 6 Übernachtungen → Package `61509` / Nächte `6`
+    - 7 Übernachtungen → Package `61510` / Nächte `7`
+
+### 08. Sparfuchswoche
+- **Slug:** `sparfuchswoche`
+- **Kategorie:** `sparpreis-wellness`
+- **Teaser:** Eine ganze Woche oder länger entspannen und dabei clever sparen.
+- **Alte URL:** https://hotel-dirsch.de/angebote/sparfuchswoche
+- **Detailquelle:** `ANGEBOTE-DETAILS/Sparfuchswoche_ Wellness, Kulinarik & Erholung im Hotel Dirsch Altmühltal.htm`
+- **Bild:** `/assets/img/dirsch/offers/08-sparfuchswoche.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/8474fe562436e599c0ad2d6e1465755d05df0936_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 7–14 Übernachtungen
+  - Landfrühstücksbuffet
+  - 1 x Begrüßungsdrink
+  - Halbpension
+  - Kuchenauswahl, Snacks und Kaffee
+  - Benutzung SPA-Bereich
+- **Detail-Leistungen:**
+  - 7–14 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink
+  - Kuchenauswahl, kleine herzhafte Snacks und Kaffee am Nachmittag
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `sparfuchswoche`
+  - Formular-URL: `/forms/offer?offer=sparfuchswoche`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 7 Übernachtungen → Package `48193` / Nächte `7`
+    - 8 Übernachtungen → Package `48651` / Nächte `8`
+    - 9 Übernachtungen → Package `48652` / Nächte `9`
+    - 10 Übernachtungen → Package `48511` / Nächte `10`
+    - 11 Übernachtungen → Package `48653` / Nächte `11`
+    - 12 Übernachtungen → Package `48654` / Nächte `12`
+    - 13 Übernachtungen → Package `48655` / Nächte `13`
+    - 14 Übernachtungen → Package `48512` / Nächte `14`
+
+### 09. Wandertage im Altmühltal
+- **Slug:** `wandertage-im-altmuehltal`
+- **Kategorie:** `aktiv`
+- **Teaser:** Aktivurlaub mit Wanderbrotzeit, Karte, Wellnessgutschein und Halbpension.
+- **Alte URL:** https://hotel-dirsch.de/angebote/wandertage-im-altmuehltal
+- **Detailquelle:** `ANGEBOTE-DETAILS/Wandertage im Altmühltal – Aktivurlaub im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/09-wandertage-im-altmuehltal.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/cf0306dc99c09d257f9203b5c48dedd1e30737c8_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 2–14 Übernachtungen
+  - Landfrühstücksbuffet
+  - Halbpension
+  - 1 x Begrüßungsdrink
+  - Tägliche Wanderbrotzeit (Lunchpaket)
+  - Wellnessgutschein
+- **Detail-Leistungen:**
+  - 2–14 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink beim Check-in
+  - Tägliche Wanderbrotzeit (Lunchpaket), selbst zusammenstellbar beim Frühstück oder nachmittags: Kuchenauswahl, kleine herzhafte Snacks & Kaffee
+  - 1 x 30,- € Wellnessgutschein pro Erwachsener (Wellness- und Beautybehandlungen bitte frühzeitig buchen: 08423 9850242)
+  - Wanderkarte von der Region
+  - Nordic Walkingstöcke und Wanderrucksack leihweise
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `wandertage`
+  - Formular-URL: `/forms/offer?offer=wandertage`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 2 Übernachtungen → Package `61441` / Nächte `2`
+    - 3 Übernachtungen → Package `61517` / Nächte `3`
+    - 4 Übernachtungen → Package `61518` / Nächte `4`
+    - 5 Übernachtungen → Package `61519` / Nächte `5`
+    - 6 Übernachtungen → Package `61520` / Nächte `6`
+    - 7 Übernachtungen → Package `61521` / Nächte `7`
+    - 8 Übernachtungen → Package `61522` / Nächte `8`
+    - 9 Übernachtungen → Package `61523` / Nächte `9`
+    - 10 Übernachtungen → Package `61524` / Nächte `10`
+    - 11 Übernachtungen → Package `61525` / Nächte `11`
+    - 12 Übernachtungen → Package `61526` / Nächte `12`
+    - 13 Übernachtungen → Package `61527` / Nächte `13`
+    - 14 Übernachtungen → Package `61528` / Nächte `14`
+
+### 10. Radfahren im Altmühltal
+- **Slug:** `radfahren-im-altmuehltal`
+- **Kategorie:** `aktiv`
+- **Teaser:** Radurlaub im Altmühltal mit Lunchpaket, Radlkarte, Wellness und Halbpension.
+- **Alte URL:** https://hotel-dirsch.de/angebote/radfahren-im-altmuehltal
+- **Detailquelle:** `ANGEBOTE-DETAILS/Radfahren im Altmühltal – Radlerurlaub im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/10-radfahren-im-altmuehltal.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/2d793d68af2199af4b5744f64159af905c097821_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 2–14 Übernachtungen
+  - Landfrühstücksbuffet
+  - Halbpension
+  - 1 x Begrüßungsdrink
+  - Tägliche Radlerbrotzeit (Lunchpaket)
+  - Wellnessgutschein
+- **Detail-Leistungen:**
+  - 2–14 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Begrüßungsdrink beim Check-in
+  - Tägliche Radlerbrotzeit (Lunchpaket), selbst zusammenstellbar beim Frühstück oder nachmittags: Kuchenauswahl, kleine herzhafte Snacks & Kaffee
+  - 1 x 30,- € Wellnessgutschein pro Erwachsener (Wellness- und Beautybehandlungen bitte frühzeitig buchen: 08423 9850242)
+  - Radlkarte von der Region
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `radfahren`
+  - Formular-URL: `/forms/offer?offer=radfahren`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 2 Übernachtungen → Package `48188` / Nächte `2`
+    - 3 Übernachtungen → Package `48596` / Nächte `3`
+    - 4 Übernachtungen → Package `48629` / Nächte `4`
+    - 5 Übernachtungen → Package `48597` / Nächte `5`
+    - 6 Übernachtungen → Package `48598` / Nächte `6`
+    - 7 Übernachtungen → Package `48598` / Nächte `7`
+    - 8 Übernachtungen → Package `61543` / Nächte `8`
+    - 9 Übernachtungen → Package `61544` / Nächte `9`
+    - 10 Übernachtungen → Package `61545` / Nächte `10`
+    - 11 Übernachtungen → Package `61546` / Nächte `11`
+    - 12 Übernachtungen → Package `61547` / Nächte `12`
+    - 13 Übernachtungen → Package `61548` / Nächte `13`
+    - 14 Übernachtungen → Package `61549` / Nächte `14`
+
+### 11. Golf und Wellness im Hotel Dirsch
+- **Slug:** `golf-und-wellness-im-hotel-dirsch`
+- **Kategorie:** `golf-aktiv`
+- **Teaser:** Golfurlaub mit Greenfee-Vorteil, Wellnessbereich und kulinarischer Begleitung.
+- **Alte URL:** https://hotel-dirsch.de/angebote/golf-und-wellness-im-hotel-dirsch
+- **Detailquelle:** `ANGEBOTE-DETAILS/Golfen & Wellness – Golfurlaub im Hotel Dirsch.htm`
+- **Bild:** `/assets/img/dirsch/offers/11-golf-und-wellness-im-hotel-dirsch.webp`
+- **Bildquelle:** `ÜBERSICHT Angebote unseres Hotels im Altmühltal _ Hotel Dirsch_files/31c8b190f08730257d1f127fb497601282bcffc9_di3Y.webp`
+- **Preistext:** nicht aus Altseite auslesbar / im Detail nicht sichtbar
+- **Preisnotiz:** Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Übersichtskacheln / Kurzleistungen:**
+  - 7 Übernachtungen
+  - Landfrühstücksbuffet
+  - Sonderkondition auf Greenfee
+  - 1 x Begrüßungsdrink bei Check in
+  - 1 x Hauscocktail an der Hotelbar mit Knabbersnacks
+  - Benutzung SPA-Bereich
+- **Detail-Leistungen:**
+  - 7 Übernachtungen
+  - Reichhaltiges Altmühltaler Landfrühstücksbuffet
+  - Halbpension (18.30-20.00 Uhr, Dessert bis 20.30 Uhr)
+  - 1 x Hauscocktail an der Hotelbar mit Knabbersnacks
+  - Greenfee (Sonderkondition: 30% Rabatt auf Greenfee) | Golfanlage Zollmühle GmbH, Zollmühle 1, 91792 Ellingen, Telefon: 09141 3976, info@golfanlage-zollmuehle.de , www.golfanlage-zollmuehle.de
+  - Schwimmbadlounge mit Saft-, Tee- und Grander Wasser Bar
+  - Bademantel leihweise
+  - Nutzung des Wellnessbereiches (aktuelle Öffnungszeiten auf der Homepage)
+  - Check-in 15.30 Uhr, Check-out 10.30 Uhr
+  - Inklusive gesetzlicher Mehrwertsteuer, Parkplatz und WLAN
+  - Zuzüglich Kurtaxe 0,50 € pro Tag/Person
+- **Buchung / Verfügbarkeit:**
+  - Typ: `offer_form`
+  - Formular-Slug: `golfen`
+  - Formular-URL: `/forms/offer?offer=golfen`
+  - Paketoptionen aus `config/offer-booking.php`:
+    - 7 Übernachtungen → Package `61561` / Nächte `7`
+
+## Umsetzungshinweise für Magica
+1. Nicht neu scrapen, sondern `data/offers/angebote-dirsch.json` als Quelle verwenden.
+2. Angebotsübersicht: Cards/Scroller wie Startseite, aber mit Angeboten, Filtern/Chips optional.
+3. Detailseite: Hero/Bild, Leistungsliste, Preistext, Buchungsbox, weitere Angebote.
+4. Buchungsbox: bestehendes `/forms/offer?offer=...` verwenden. Für `schnaeppchentage` Sonderfall Direktlink/Terminliste beachten.
+5. Keine Änderungen an Restaurant/Tagungen-Inhalten in diesem Schritt.
