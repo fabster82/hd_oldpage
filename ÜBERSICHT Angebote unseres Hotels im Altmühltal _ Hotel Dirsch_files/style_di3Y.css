@@ -1,0 +1,240 @@
+@font-face {
+    font-family:'MyriadSetPro-Bold';
+    src: url('//www.wellness-heaven.de/widget/fonts/MyriadSetPro-Bold_gdi.eot');
+    src: url('//www.wellness-heaven.de/widget/fonts/MyriadSetPro-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('//www.wellness-heaven.de/widget/fonts/MyriadSetPro-Bold_gdi.woff') format('woff'),
+        url('//www.wellness-heaven.de/widget/fonts/MyriadSetPro-Bold_gdi.ttf') format('truetype'),
+        url('//www.wellness-heaven.de/widget/fonts/MyriadSetPro-Bold_gdi.svg#MyriadSetPro-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+@font-face {
+    font-family:'MyriadSetPro-Semibold';
+    src: url('../fonts/MyriadSetPro-Semibold_gdi.eot');
+    src: url('../fonts/MyriadSetPro-Semibold_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadSetPro-Semibold_gdi.woff') format('woff'),
+        url('../fonts/MyriadSetPro-Semibold_gdi.ttf') format('truetype'),
+        url('../fonts/MyriadSetPro-Semibold_gdi.svg#MyriadSetPro-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+
+@font-face {
+    font-family:'MyriadSetPro-Text';
+    src: url('../fonts/MyriadSetPro-Text_gdi.eot');
+    src: url('../fonts/MyriadSetPro-Text_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadSetPro-Text_gdi.woff') format('woff'),
+        url('../fonts/MyriadSetPro-Text_gdi.ttf') format('truetype'),
+        url('../fonts/MyriadSetPro-Text_gdi.svg#MyriadSetPro-Text') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2212;
+}
+
+@font-face {
+    font-family:'MyriadSetPro-Thin';
+    src: url('../fonts/MyriadSetPro-Thin_gdi.eot');
+    src: url('../fonts/MyriadSetPro-Thin_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadSetPro-Thin_gdi.woff') format('woff'),
+        url('../fonts/MyriadSetPro-Thin_gdi.ttf') format('truetype'),
+        url('../fonts/MyriadSetPro-Thin_gdi.svg#MyriadSetPro-Thin') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+000A-2212;
+}
+
+@font-face {
+    font-family:'MyriadSetPro-Ultralight';
+    src: url('../fonts/MyriadSetPro-Ultralight_gdi.eot');
+    src: url('../fonts/MyriadSetPro-Ultralight_gdi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MyriadSetPro-Ultralight_gdi.woff') format('woff'),
+        url('../fonts/MyriadSetPro-Ultralight_gdi.ttf') format('truetype'),
+        url('../fonts/MyriadSetPro-Ultralight_gdi.svg#MyriadSetPro-Ultralight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+000D-2265;
+}
+
+#wl-heaven-wrap {
+	width: 100%!important;
+	font-family:'MyriadSetPro-Semibold' !important;
+}
+#wl-heaven-wrap:after,
+#wl-heaven-wrap:before {
+	content:''!important;
+	display: block!important;
+	clear: both!important;
+}
+#wl-heaven-wrap .wl-heaven-cont {
+	background: #fff !important;
+    overflow: hidden !important;
+    -webkit-border-radius: 60px !important;
+    -moz-border-radius: 60px !important;
+    border-radius: 60px !important;
+    -webkit-box-shadow: 1px 1px 20px 0 rgba(0,0,0,.08) !important;
+    box-shadow: 1px 1px 20px 0 rgba(0,0,0,.08) !important;
+    border:2px solid #dbdbdb !important;
+    max-width: 250px !important;
+    min-width: 250px !important;
+    margin:0 auto!important;
+}
+#wl-heaven-wrap.wl-small .wl-heaven-cont {
+    max-width: 150px !important;
+    min-width: 150px!important;
+}
+#wl-heaven-wrap.wl-medium .wl-heaven-cont {
+    max-width: 200px !important;
+    min-width: 200px!important;
+}
+
+#wl-heaven-wrap .wl-heaven-cont.wl-hover {
+	border-color: #3eaadf !important;	
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-header .wl-heaven-image {
+	padding: 30px !important;
+}
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-header .wl-heaven-image {
+    padding: 15px !important;
+}
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-header .wl-heaven-image {
+    padding: 20px !important;
+}
+
+#wl-heaven-wrap.wl-large .wl-heaven-cont .wl-heaven-header .wl-heaven-image img {
+    width: 180px !important;
+}
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-header .wl-heaven-image img {
+    width: 130px !important;
+}
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-header .wl-heaven-image img {
+    width: 100px !important;
+}
+
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-header .wl-heaven-image .wl-link {
+    font-family:'MyriadSetPro-Thin' !important;
+    color: #868787!important;
+    text-decoration: none!important;
+    text-transform: uppercase!important;
+    display: block!important;
+    text-align: center!important;
+    letter-spacing: 2px !important;
+}
+#wl-heaven-wrap.wl-large .wl-heaven-cont .wl-heaven-header .wl-heaven-image .wl-link {
+    font-size: 23px !important;
+}
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-header .wl-heaven-image .wl-link {
+    font-size: 20px !important;
+}
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-header .wl-heaven-image .wl-link {
+    font-size: 16px !important;
+}
+
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-header .wl-heaven-image .wl-link span {
+    font-family:'MyriadSetPro-Bold' !important;
+    font-weight: bold;
+    color: #2D3032 !important;
+    margin:0 3px 0 0!important;
+    letter-spacing: 2px !important;
+}
+
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-header .wl-heaven-image > img {
+    display: block !important;
+    width: 180px !important;
+    margin: 0 auto!important;
+}
+
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body {
+	background: #f7f7f7 !important;
+	padding: 15px 15px 15px !important;
+    position: relative!important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-link2 {
+    position: absolute !important;
+    top:0!important;
+    left: 0!important;
+    bottom: 0!important;
+    right: 0!important;
+    z-index: 99!important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-txt {
+	color: #9d9d9d !important;
+	font-size: 22px !important;
+	text-transform: uppercase !important;
+	text-align: center !important;
+	font-family:'MyriadSetPro-Semibold' !important;
+	margin-bottom: 10px !important;
+	letter-spacing: 2px !important;
+	padding-left: 4px !important;
+}
+
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-body .wl-heaven-txt,
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-body .wl-heaven-txt2 {
+    font-size: 13px !important;
+    top: 0!important;
+    padding-left: 0px !important;
+}
+
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-body .wl-heaven-txt,
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-body .wl-heaven-txt2 {
+    font-size: 13px !important;
+    top: 0!important;
+}
+#wl-heaven-wrap.wl-large .wl-heaven-cont .wl-heaven-body .wl-heaven-txt2 {
+    top:0 !important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-txt2 {
+    color: #9d9d9d !important;
+    font-size: 22px !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-family:'MyriadSetPro-Semibold' !important;
+    margin-bottom: 0px !important;
+    letter-spacing: 2px !important;
+    padding-left: 4px !important;
+    position: relative !important;
+    top:8px !important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-rating {
+    font-family: 'MyriadSetPro-Semibold' !important;
+	color: #333 !important;
+	font-size: 46px !important;
+	text-align: center !important;
+}
+#wl-heaven-wrap.wl-large .wl-heaven-cont .wl-heaven-body .wl-heaven-rating {
+    font-size: 46px !important;
+}
+#wl-heaven-wrap.wl-medium .wl-heaven-cont .wl-heaven-body .wl-heaven-rating {
+    font-size: 23px !important;
+}
+#wl-heaven-wrap.wl-small .wl-heaven-cont .wl-heaven-body .wl-heaven-rating {
+    font-size: 16px !important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-rating .wl-heaven-first-point {
+	font-family:'MyriadSetPro-Bold' !important;
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-rating .wl-heaven-last-point {
+    font-family:'MyriadSetPro-Text' !important;    
+}
+#wl-heaven-wrap .wl-heaven-cont .wl-heaven-body .wl-heaven-rating .wl-heaven-slash {
+    font-family:'MyriadSetPro-Ultralight' !important;  
+	color: #7d7d7d !important;
+	margin:0 8px!important;
+}
+#wl-heaven-wrap .wl-heaven-cont > a {
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    bottom: 0!important;
+    right: 0!important;
+    height: 100%!important;
+    width: 100%!important;
+    display: block!important;
+    text-indent: -9999px!important;
+}
